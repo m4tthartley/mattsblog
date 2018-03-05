@@ -1,5 +1,12 @@
 import injectSheet from 'react-jss'
-import View from './view'
-import style from './style'
+import {connect} from 'react-redux'
 
-export default injectSheet(style)(View)
+import View from './view'
+import styles from './styles'
+import {selectPhotos} from './selectors'
+
+const mapStateToProps = (_) => ({
+	photos: selectPhotos()
+})
+
+export default connect(mapStateToProps)(injectSheet(styles)(View))
