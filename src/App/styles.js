@@ -14,15 +14,23 @@ export default {
 		margin: '0 auto'
 	},
 	header: {
-		fontFamily: 'Georgia',
-		fontSize: '1.5rem',
-		marginTop: '40px'
+		fontFamily: 'Playfair Display,Georgia',
+		fontSize: '2rem',
+		fontWeight: 'normal',
+		margin: '40px 0 0'
 	},
 	photo: {
 		display: 'block',
 		margin: '40px 0',
-		// width: '1024px',
 		maxWidth: '100%',
 		maxHeight: '1024px'
+	},
+	'@media (max-width: 720px)': {
+		header: {
+			margin: '40px 0'
+		},
+		photo: {
+			margin: '0',
+		}
 	}
 }
