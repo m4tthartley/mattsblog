@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default ({classes,photos}) => {
+import Test from '../Test'
+
+export default ({classes,photos,...props}) => {
 	return (
 		<div className={classes.view}>
-			<h1 className={classes.header}>Matt Hartley</h1>
+			{/*<Test />*/}
+
+			<h1 className={classes.header} onClick={props.update}>Matt Hartley</h1>
 
 			{photos.map(v =>
 				<img key={v} className={classes.photo} src={v} alt="" />

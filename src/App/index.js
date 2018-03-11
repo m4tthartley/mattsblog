@@ -1,5 +1,5 @@
 import injectSheet from 'react-jss'
-import {connect} from 'react-redux'
+import {withProps} from 'react-with-props'
 
 import View from './view'
 import styles from './styles'
@@ -9,4 +9,13 @@ const mapStateToProps = (_) => ({
 	photos: selectPhotos()
 })
 
-export default connect(mapStateToProps)(injectSheet(styles)(View))
+const mapDispatchToProps = () => ({
+	componentDidMount() {
+		console.log('mount')
+	},
+	componentWillReceiveProps() {
+		console.log('props')
+	}
+})
+
+export default withProps(mapStateToProps)(injectSheet(styles)(View))
