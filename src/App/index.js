@@ -9,13 +9,4 @@ const mapStateToProps = (_) => ({
 	photos: selectPhotos()
 })
 
-const mapDispatchToProps = () => ({
-	componentDidMount() {
-		console.log('mount')
-	},
-	componentWillReceiveProps() {
-		console.log('props')
-	}
-})
-
 export default withProps(mapStateToProps)(injectSheet(styles)(View))
